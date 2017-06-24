@@ -42,5 +42,6 @@ else
 fi
 
 ant create_run_jar copy_res
-cd out/production
-java -Djava.ext.dirs= -jar jmavsim_run.jar $device $extra_args
+
+java -Djava.ext.dirs= -cp lib/*:out/production/jmavsim.jar me.drton.jmavsim.Simulator $device $extra_args
+
